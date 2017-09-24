@@ -1,0 +1,19 @@
+
+
+<div class="data" style="display: block">
+  <canvas height="310" width="795" style="display: block; width: 795px; height: 310px;" baseChart *ngIf="doughnutChartData.length > 0"
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              [colors]="doughnutColors"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+  </canvas>
+  
+  
+</div>
+<div class="value" style="font-size:40px;position: absolute;
+left: 360px;
+top: 160px;">
+  {{doughnutChartData[0]}}%
+
